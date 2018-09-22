@@ -114,7 +114,7 @@ func cmdCounter(cmd *cobra.Command, args []string) error {
 	logger := log.NewTMLogger(log.NewSyncWriter(os.Stdout))
 
 	// Start the listener
-	srv, err := server.NewServer(flagAddrC, flagAbci, app)
+	srv, err := server.NewServer(flagAddress, flagAbci, app)
 	if err != nil {
 		return err
 	}
